@@ -1,8 +1,8 @@
+import numpy
 import numpy as np
 
 if __name__ == '__main__':
 
-    # Init Matrix
     A = np.array([
         [3., 2.],
         [1., 4.]
@@ -12,6 +12,7 @@ if __name__ == '__main__':
         [2., 1.],
         [1., 1.]
     ])
+
     print("\nA + B")
     print(A + B)
 
@@ -22,12 +23,26 @@ if __name__ == '__main__':
         [1., 4., 5.],
         [7., 2., 1.]
     ])
-    print("\nDet")
+    print("\nDeterminant")
     print(np.linalg.det(C))
 
-    # resolution equation
     print('\nResolution Ax = B')
-    A = np.array([[1,1,1,1],[0,3,3,3],[0,0,2,1],[0,0,1,1]])
-    b = [205,300,120,90]
-    x = np.linalg.solve(A,b)
+    A = np.array([
+        [1, 1, 1, 1],
+        [0, 3, 3, 3],
+        [0, 0, 2, 1],
+        [0, 0, 1, 1]
+    ])
+
+    b = [205, 300, 120, 90]
+    x = np.linalg.solve(A, b)
     print(x)
+
+    print('\nInverse')
+    A = np.array([
+        [2, 3],
+        [4, 2]
+    ])
+
+    B = np.linalg.inv(A)
+    print(B)
